@@ -1,0 +1,7 @@
+{
+  "name": "PolyPoints",
+  "short_name": "PolyPoints",
+  "description": "Plataforma para fortalecer el uso de los puntos Bancomer",
+  "start_url": "/",
+  "display": "standalone"
+}
