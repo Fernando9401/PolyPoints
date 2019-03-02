@@ -1,0 +1,62 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#headLogo{
+    font-size: 20px;
+    background-color: #2D89F6;
+    padding: 5px;
+    margin: 2px;
+    color: white;
+}
+#itemWel{
+    display: inline;
+}
+
+#botton-catalog{
+    height: 100px;
+    width: 100%;
+}
+
+#catalog{
+    display: block;
+    height: 50px;
+    width: 400px;
+    background-color: #3B7BC4;
+    color: white; 
+    margin: auto;
+}
+
+#item-description{
+    display: inline-block;
+    width: 45%;
+}
+
+#item-description p{  
+    padding: 5px;
+ }
+
+#item-description img{
+    padding: 10px;
+    float: right;
+    width: 30%;
+}
+
+footer{
+    background-color: #1E4776;
+    height: 200px;
+}
+
+#empresa{
+    font-size: 20px;
+    color: white;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+#slogan {
+    font-size: 15px;
+    color: darkgray;
+    margin-left: 5px;
+    
+}
+

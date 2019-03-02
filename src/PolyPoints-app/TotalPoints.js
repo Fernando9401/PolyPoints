@@ -6,27 +6,31 @@ import '@polymer/iron-icon/iron-icon.js';
  * @customElement
  * @polymer
  */
-class PolyPointsApp extends PolymerElement {
+class TotalPoints extends PolymerElement {
   static get template() {
     return html`
       <style>
         :host {
           display: inline-block;
+          float: right;
           font-family: Verdana, Geneva, Tahoma, sans-serif;
           padding: 5px;
         }
+
       </style>
-      <h3>Bienvenido [[prop1]]!</h3>
+        <div>
+            <p>Tus puntos Bancomer son: [[points]]</p>
+        </div>
     `;
   }
   static get properties() {
     return {
-      prop1: {
+      points: {
         type: String,
-        value: 'Fernando'
+        value: '2200'
       }
     };
   }
 }
 
-window.customElements.define('poly-points-app', PolyPointsApp);
+window.customElements.define('total-points-app', TotalPoints);
