@@ -2,6 +2,7 @@
   "name": "PolyPoints",
   "description": "Plataforma para fortalecer el uso de los puntos Bancomer",
   "dependencies": {
+    "@polymer/iron-icons": "^3.0.1",
     "@polymer/polymer": "^3.0.0"
   },
   "devDependencies": {

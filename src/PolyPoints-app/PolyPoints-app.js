@@ -1,4 +1,6 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
+import '@polymer/iron-icons/iron-icons.js';
+import '@polymer/iron-icon/iron-icon.js';
 
 /**
  * @customElement
@@ -12,14 +14,15 @@ class PolyPointsApp extends PolymerElement {
           display: block;
         }
       </style>
-      <h2>Hello [[prop1]]!</h2>
+      <h3>Bienvenido [[prop1]]!</h3>
+      <iron-icon icon="search"></iron-icon>
     `;
   }
   static get properties() {
     return {
       prop1: {
         type: String,
-        value: 'PolyPoints-app'
+        value: 'Fernando'
       }
     };
   }
