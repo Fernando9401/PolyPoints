@@ -25,4 +25,4 @@ class PolyPointsApp extends PolymerElement {
   }
 }
 
-window.customElements.define('PolyPoints-app', PolyPointsApp);
+window.customElements.define('poly-points-app', PolyPointsApp);
