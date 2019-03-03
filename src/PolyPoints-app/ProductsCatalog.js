@@ -55,7 +55,7 @@ class ProductsCatalog extends PolymerElement {
         </tr>
         <template is="dom-repeat" items="[[products]]">
             <tr>
-                <td><input type="checkbox" name="" value="true"></td>
+                <td><input type="checkbox" checked="[[checked]]" on-click="itemChecked"></td>
                 <td><img src="[[item.image]]" alt="image" width="50px" height="50px"> [[item.name]]</td>
                 <td>[[item.price]]</td>
                 <td>[[item.shop]]</td>
@@ -97,6 +97,11 @@ class ProductsCatalog extends PolymerElement {
                     price: 3000,
                     shop: 'Sears'
                 }]
+            },
+            checked: {
+                type: Boolean,
+                observer: 'checkedChanged',
+                value: false
             }
         };
     }
@@ -105,6 +110,15 @@ class ProductsCatalog extends PolymerElement {
         var puntos = 90000;
         var result = puntos - precio;
         return result;
+    }
+
+    itemChecked(item){
+        console.log("The Check Box was clicked.");
+        console.log(item);
+    }
+    checkedChanged(newValue, oldValue){
+        console.log("New Checkbox value: " + newValue);
+        console.log("Old Checkbox value: " + oldValue);
     }
 
 }
