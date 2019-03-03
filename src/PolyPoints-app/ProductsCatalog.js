@@ -63,6 +63,8 @@ class ProductsCatalog extends PolymerElement {
             </tr>
         </template>
     </table>
+
+    <!--<input id="addlist" type="button" onclick="goToOtherPage" value="Agregar a la lista">-->
     `;
     }
     static get properties() {
@@ -121,6 +123,12 @@ class ProductsCatalog extends PolymerElement {
         console.log("New Checkbox value: " + newValue);
         console.log("Old Checkbox value: " + oldValue);
     }
+
+    /*goToOtherPage(){
+        document.getElementById("addlist").onclick = function () {
+            location.href = "/list.html";
+        }
+    }*/
 
 }
 
