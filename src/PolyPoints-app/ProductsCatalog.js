@@ -1,4 +1,5 @@
-import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
+import { html, PolymerElement } from '@polymer/polymer/polymer-element.js';
+import '@polymer/polymer/lib/elements/dom-repeat.js';
 import '@polymer/iron-icons/iron-icons.js';
 import '@polymer/iron-icon/iron-icon.js';
 
@@ -8,15 +9,15 @@ import '@polymer/iron-icon/iron-icon.js';
  */
 
 class ProductsCatalog extends PolymerElement {
-    
-  static get template() {
-    return html`
+
+    static get template() {
+        return html`
       <style>
         :host {
           display: block;
         }
 
-        #customers {
+        table {
             margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
@@ -25,14 +26,13 @@ class ProductsCatalog extends PolymerElement {
             width: 80%;
           }
           
-          #customers td, #customers th {
+          td, th {
             border: 1px solid #ddd;
             padding: 8px;
           }
+            tr:hover {background-color: #ddd;}
           
-          #customers tr:hover {background-color: #ddd;}
-          
-          #customers th {
+          th {
             padding-top: 12px;
             padding-bottom: 12px;
             text-align: left;
@@ -40,42 +40,68 @@ class ProductsCatalog extends PolymerElement {
             color: white;
           }
       </style>
-      <table id="customers">
-    <tr>
-        <th>Producto más comprado</th>
-        <th>Puntos requeridos</th>
-        <th>Comercios disponibles</th>
-    </tr>
-    <tr>
-        <td><img src="img/smartwatch.jpg" alt="purse" width="50px" height="50px"> SmartWatch</td>
-        <td>20200</td>
-        <td>Palacio de Hierro</td>
-    </tr>
-    <tr>
-        <td><img src="img/purse.jpg" alt="purse" width="50px" height="50px"> Bolsa Louis Vuitton</td>
-        <td>67000</td>
-        <td>Liverpool</td>
-    </tr>
-    <tr>
-        <td><img src="img/belt.jpg" alt="purse" width="50px" height="50px"> Cinturon GUCCI</td>
-        <td>5000</td>
-        <td>Sears</td>
-    </tr>
-    <tr>
-        <td><img src="img/book.jpg" alt="purse" width="50px" height="50px"> Libro El Principito</td>
-        <td>3000</td>
-        <td>Sears</td>
-    </tr>
+
+    <table>
+        <tr>
+          <th>Agregar a la lista</th>
+          <th>Producto más vendido</th>
+          <th>Precio puntos Bancomer</th>
+          <th>Comercio con covenio</th>
+          <th>Puntos restantes</th>
+        </tr>
+            <template is="dom-repeat" items="[[products]]">
+                <tr>
+                    <td><input type="checkbox" name="sel" value=""></td>
+                    <td><img src="[[item.imagen]]" alt="image" width="50px" height="50px"> [[item.name]]</td>
+                    <td>[[item.precio]]</td>
+                    <td>Sears</td>
+                    <td>[[restante(item.precio)]]</td>
+                </tr>
+            </template>
+    </table>
     `;
-  }
-  static get properties() {
-    return {
-      points: {
-        type: String,
-        value: 'text'
-      }
-    };
-  }
+    }
+    static get properties() {
+        return {
+            points: {
+                type: String,
+                value: 'text'
+            },
+            products: {
+                type: Array,
+                value: [{
+                    imagen: 'img/book.jpg',
+                    name: 'Libro El Principito',
+                    precio: 3000,
+                    comercio: 'Sears'
+                },
+                {
+                    imagen: 'img/smartwatch.jpg',
+                    name: 'smartwatch',
+                    precio: 20200,
+                    comercio: 'Liverpool'
+                },
+                {
+                    imagen: 'img/belt.jpg',
+                    name: 'belt',
+                    precio: 5000,
+                    comercio: 'Sears'
+                },
+                {
+                    imagen: 'img/purse.jpg',
+                    name: 'purse',
+                    precio: 67000,
+                    comercio: 'Liverpool'
+                }]
+            }
+        };
+    }
+
+    restante(precio){
+        var puntos = 220000;
+        var result = puntos - precio;
+        return result;
+    }
 }
 
 window.customElements.define('products-catalog-app', ProductsCatalog);

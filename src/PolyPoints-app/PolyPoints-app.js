@@ -7,6 +7,7 @@ import '@polymer/iron-icon/iron-icon.js';
  * @polymer
  */
 class PolyPointsApp extends PolymerElement {
+
   static get template() {
     return html`
       <style>
