@@ -2,11 +2,13 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #headLogo{
+    display: inline-block;
     font-size: 20px;
     background-color: #2D89F6;
     padding: 5px;
     margin: 2px;
     color: white;
+    width: 80%;
 }
 #itemWel{
     display: inline;
@@ -21,7 +23,7 @@ body{
     display: block;
     height: 50px;
     width: 400px;
-    background-color: #3B7BC4;
+    background-color: #1E4776;
     color: white; 
     margin: auto;
 }
@@ -32,7 +34,7 @@ body{
 }
 
 #item-description p{  
-    padding: 5px;
+    padding: 10px;
  }
 
 #item-description img{
@@ -43,7 +45,7 @@ body{
 
 footer{
     background-color: #1E4776;
-    height: 200px;
+    height: 180px;
 }
 
 #empresa{
@@ -60,3 +62,26 @@ footer{
     
 }
 
+#home{
+    width: 10%;
+    height: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px;
+    margin: 2px;
+    background-color: #2D89F6;
+    color: white;
+    display: inline-block;
+}
+
+#menu-principal{
+    background-color: #2D89F6;
+}
+
+#menu-principal a{
+    color: white;
+}
+
+#gift-blue{
+    margin-top: 30px;
+}

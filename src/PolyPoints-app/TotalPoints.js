@@ -27,7 +27,7 @@ class TotalPoints extends PolymerElement {
     return {
       points: {
         type: String,
-        value: '2200'
+        value: '220000'
       }
     };
   }

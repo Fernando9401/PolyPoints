@@ -10,17 +10,33 @@
     <!-- See https://goo.gl/OOhYW5 -->
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script type="module" src="/src/PolyPoints-app/PolyPoints-app.js" crossorigin></script>
     <script type="module" src="/src/PolyPoints-app/TotalPoints.js" crossorigin></script>
 
-    
   </head>
   <body>
     <head>
-        <div id="headLogo">
-          <p id="titleLogo">PolyPoints</p>
-        </div>
+        <nav id="menu-principal" class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">Polypoints</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalog.html">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalog.html">Catalogo</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </head>
     
     <div id = "welcome">
@@ -42,14 +58,20 @@
             <img src="img/logoPuntos.png" alt="Logo">
         </div>
     </div>
-      
+    
     <div id="botton-catalog">
-        <button id="catalog">Consulta Catálogo</button>
+        <button type="button" class="btn" id="catalog">Consulta Catálogo</button>
     </div>
 
     <footer>
       <p id="empresa">BBVA Bancomer</p>
       <p id="slogan">Creando Oportunidades</p>
     </footer>
+
+    <script type="text/javascript">
+      document.getElementById("catalog").onclick = function () {
+          location.href = "catalog.html";
+      };
+  </script>
   </body>
 </html>

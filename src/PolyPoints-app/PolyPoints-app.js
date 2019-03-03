@@ -16,7 +16,7 @@ class PolyPointsApp extends PolymerElement {
           padding: 5px;
         }
       </style>
-      <h3>Bienvenido [[prop1]]!</h3>
+      <h3>Bienvenido(a) [[prop1]]!</h3>
     `;
   }
   static get properties() {
