@@ -79,19 +79,19 @@ class ProductsCatalog extends PolymerElement {
                 },
                 {
                     image: 'img/smartwatch.jpg',
-                    name: 'SmartWatch',
+                    name: 'Apple Watch',
                     price: 20200,
                     shop: 'Liverpool'
                 },
                 {
                     image: 'img/belt.jpg',
-                    name: 'Cinturon',
+                    name: 'Cinturon GUCCI',
                     price: 5000,
                     shop: 'Sears'
                 },
                 {
                     image: 'img/purse.jpg',
-                    name: 'Bolso',
+                    name: 'Bolso Louis Vuitton',
                     price: 67000,
                     shop: 'Liverpool'
                 }]
