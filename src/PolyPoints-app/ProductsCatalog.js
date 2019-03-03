@@ -73,6 +73,7 @@ class ProductsCatalog extends PolymerElement {
             },
             products: {
                 type: Array,
+                notify:true,
                 value: [{
                     image: 'img/smartwatch.jpg',
                     name: 'Apple Watch',
@@ -114,7 +115,7 @@ class ProductsCatalog extends PolymerElement {
 
     itemChecked(item){
         console.log("The Check Box was clicked.");
-        console.log(item);
+        item.model.item.selected = item.target.checked;
     }
     checkedChanged(newValue, oldValue){
         console.log("New Checkbox value: " + newValue);
