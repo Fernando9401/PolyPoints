@@ -45,7 +45,7 @@ body{
 
 footer{
     background-color: #1E4776;
-    height: 180px;
+    height: 160px;
 }
 
 #empresa{
@@ -83,12 +83,6 @@ footer{
     color: white;
 }
 
-
-#items{
-    display: inline-block;
-}
-
-
 #gift-blue{
     display: inline-block;
     width: 30%;
@@ -96,12 +90,18 @@ footer{
 }
 
 #map{
-    width: 60%;
-    float: right;
+    width: 65%;
     display: inline-block;
+    margin-top: 30px;
 }
 
 #maps-shop{
-    width: 200px;
-    height: 200px;
+    float: right;
+    width: 400px;
+    height: 160px;
+}
+
+#item{
+    width: 100%;
+    margin: 0px;
 }

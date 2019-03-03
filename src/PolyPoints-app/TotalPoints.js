@@ -15,6 +15,7 @@ class TotalPoints extends PolymerElement {
           float: right;
           font-family: Verdana, Geneva, Tahoma, sans-serif;
           padding: 5px;
+          margin-right: 20px;
         }
 
       </style>

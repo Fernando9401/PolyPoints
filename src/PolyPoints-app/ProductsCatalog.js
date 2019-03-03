@@ -39,25 +39,27 @@ class ProductsCatalog extends PolymerElement {
             background-color: #2D89F6;
             color: white;
           }
+          #maps-shop{
+              width: 200px;
+              height: 200px;
+          }
       </style>
 
     <table>
         <tr>
-          <th>Agregar a la lista</th>
           <th>Producto más vendido</th>
           <th>Precio puntos Bancomer</th>
           <th>Comercio con covenio</th>
           <th>Puntos restantes</th>
         </tr>
-            <template is="dom-repeat" items="[[products]]">
-                <tr>
-                    <td><input type="checkbox" name="sel" value=""></td>
-                    <td><img src="[[item.imagen]]" alt="image" width="50px" height="50px"> [[item.name]]</td>
-                    <td>[[item.precio]]</td>
-                    <td>Sears</td>
-                    <td>[[restante(item.precio)]]</td>
-                </tr>
-            </template>
+        <template is="dom-repeat" items="[[products]]">
+            <tr>
+                <td><img src="[[item.image]]" alt="image" width="50px" height="50px"> [[item.name]]</td>
+                <td>[[item.price]]</td>
+                <td>[[item.shop]]</td>
+                <td>[[restante(item.price)]]</td>
+            </tr>
+        </template>
     </table>
     `;
     }
@@ -70,28 +72,28 @@ class ProductsCatalog extends PolymerElement {
             products: {
                 type: Array,
                 value: [{
-                    imagen: 'img/book.jpg',
+                    image: 'img/book.jpg',
                     name: 'Libro El Principito',
-                    precio: 3000,
-                    comercio: 'Sears'
+                    price: 3000,
+                    shop: 'Sears'
                 },
                 {
-                    imagen: 'img/smartwatch.jpg',
-                    name: 'smartwatch',
-                    precio: 20200,
-                    comercio: 'Liverpool'
+                    image: 'img/smartwatch.jpg',
+                    name: 'SmartWatch',
+                    price: 20200,
+                    shop: 'Liverpool'
                 },
                 {
-                    imagen: 'img/belt.jpg',
-                    name: 'belt',
-                    precio: 5000,
-                    comercio: 'Sears'
+                    image: 'img/belt.jpg',
+                    name: 'Cinturon',
+                    price: 5000,
+                    shop: 'Sears'
                 },
                 {
-                    imagen: 'img/purse.jpg',
-                    name: 'purse',
-                    precio: 67000,
-                    comercio: 'Liverpool'
+                    image: 'img/purse.jpg',
+                    name: 'Bolso',
+                    price: 67000,
+                    shop: 'Liverpool'
                 }]
             }
         };
@@ -102,6 +104,7 @@ class ProductsCatalog extends PolymerElement {
         var result = puntos - precio;
         return result;
     }
+
 }
 
 window.customElements.define('products-catalog-app', ProductsCatalog);
