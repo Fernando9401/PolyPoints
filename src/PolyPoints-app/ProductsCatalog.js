@@ -47,6 +47,7 @@ class ProductsCatalog extends PolymerElement {
 
     <table>
         <tr>
+          <th>Agregar a lista</th>
           <th>Producto más vendido</th>
           <th>Precio puntos Bancomer</th>
           <th>Comercio con covenio</th>
@@ -54,6 +55,7 @@ class ProductsCatalog extends PolymerElement {
         </tr>
         <template is="dom-repeat" items="[[products]]">
             <tr>
+                <td><input type="checkbox" name="" value="true"></td>
                 <td><img src="[[item.image]]" alt="image" width="50px" height="50px"> [[item.name]]</td>
                 <td>[[item.price]]</td>
                 <td>[[item.shop]]</td>
@@ -72,15 +74,9 @@ class ProductsCatalog extends PolymerElement {
             products: {
                 type: Array,
                 value: [{
-                    image: 'img/book.jpg',
-                    name: 'Libro El Principito',
-                    price: 3000,
-                    shop: 'Sears'
-                },
-                {
                     image: 'img/smartwatch.jpg',
                     name: 'Apple Watch',
-                    price: 20200,
+                    price: 100000,
                     shop: 'Liverpool'
                 },
                 {
@@ -94,13 +90,19 @@ class ProductsCatalog extends PolymerElement {
                     name: 'Bolso Louis Vuitton',
                     price: 67000,
                     shop: 'Liverpool'
+                },
+                {
+                    image: 'img/book.jpg',
+                    name: 'Libro El Principito',
+                    price: 3000,
+                    shop: 'Sears'
                 }]
             }
         };
     }
 
     restante(precio){
-        var puntos = 220000;
+        var puntos = 90000;
         var result = puntos - precio;
         return result;
     }

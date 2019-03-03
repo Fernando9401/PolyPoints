@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="/src/PolyPoints-app/TotalPoints.js" crossorigin></script>
 
 </head>
 <body>
@@ -34,6 +35,12 @@
         </div>
     </nav>
 
+    <div class="container">
+        <div class="row">
+                <total-points-app></total-points-app>
+        </div>
+    </div>
+
     <div class="container" style="width: 50%; margin-top: 30px; margin-bottom: 30px;">
         <div class="row">
             <div class="col align-self-center">
@@ -42,15 +49,62 @@
                         Mi lista
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Producto 1</li>
-                        <li class="list-group-item">Producto 2</li>
-                        <li class="list-group-item">Producto 3</li>
+                        <li class="list-group-item text-success">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        Libro El Principito
+                                    </div>
+                                    <div class="col">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item text-danger">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        Apple Watch
+                                    </div>
+                                    <div class="col">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item text-danger">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        Iphone 8
+                                    </div>
+                                    <div class="col">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div> 
     </div>
     
+    <div class="media">
+        <img src="img/envelope-points.png" class="mr-3" alt="Logo" style="width: 200px; height:200px;">
+        <div class="media-body">
+            <h5 class="mt-0">Recuerda...</h5>
+            <p>Sigue acumulando puntos y serás notificado cuando tengas los puntos necesarios para adquirir algún producto de tu lista</p>
+        </div>
+    </div>
+
     <footer>
         <p id="empresa">BBVA Bancomer</p>
         <p id="slogan">Creando Oportunidades</p>
